@@ -37,4 +37,4 @@ credited in the advisory unless they ask not to be.
 Only the tip of `main`, which is what runs at `status.usechirp.app`.
 
 Flaws in Chirp itself go to Chirp's policy:
-<https://github.com/barahn/chirp/security/policy>.
+<https://github.com/chirp-remote/chirp/security/policy>.

@@ -1,6 +1,6 @@
 # chirp-status
 
-Measures the servers of [Chirp](https://github.com/barahn/chirp)'s public
+Measures the servers of [Chirp](https://github.com/chirp-remote/chirp)'s public
 network from outside, and serves the figures and the page that shows them at
 [status.usechirp.app](https://status.usechirp.app): whether each server
 is up now, since when it has been off-line, and how much of each day it
@@ -64,9 +64,9 @@ keeping the record contiguous. A declared rename stays after it has been applied
 holds the old id.
 
 The definitions, and why the network is shaped as it is, are in Chirp's
-[`docs/status-page-proposal.md`](https://github.com/barahn/chirp/blob/main/docs/status-page-proposal.md).
+[`docs/status-page-proposal.md`](https://github.com/chirp-remote/chirp/blob/main/docs/status-page-proposal.md).
 The list of servers is Chirp's
-[`network/servers.json`](https://github.com/barahn/chirp/blob/main/network/servers.json):
+[`network/servers.json`](https://github.com/chirp-remote/chirp/blob/main/network/servers.json):
 a server joins or leaves the network by a pull request there, and the monitor
 reads the list from Chirp's `main`.
 

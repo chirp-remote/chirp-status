@@ -14,7 +14,7 @@
   // A watchdog only; the rounds run on the object's own 30 s alarm.
   "triggers": { "crons": ["*/5 * * * *"] },
   "vars": {
-    "REGISTRY_URL": "https://raw.githubusercontent.com/barahn/chirp/main/network/servers.json",
+    "REGISTRY_URL": "https://raw.githubusercontent.com/chirp-remote/chirp/main/network/servers.json",
     "VANTAGE": "Cloudflare",
     "ALLOW_ORIGIN": "https://usechirp.app",
     // The status page is Chirp's, published there; the Worker serves it at /.
