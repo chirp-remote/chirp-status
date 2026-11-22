@@ -6,7 +6,7 @@ import { rewriteHref, servePage, upstreamPath } from "../src/page";
 
 describe("servePage", () => {
   const page = `<!doctype html><html><head><link rel="stylesheet" href="/assets/site.css?v=1"><script src="/assets/status.js?v=2" defer></script></head>
-<body><a class="brand" href="/">Chirp</a><a href="/#download">Download</a><a href="/status/">Network status</a><a href="https://github.com/barahn/chirp">GitHub</a><main data-api="https://status.usechirp.app"></main></body></html>`;
+<body><a class="brand" href="/">Chirp</a><a href="/#download">Download</a><a href="/status/">Network status</a><a href="https://github.com/chirp-remote/chirp">GitHub</a><main data-api="https://status.usechirp.app"></main></body></html>`;
   const site = async (url: string, init: RequestInit): Promise<Response> => {
     asked.push([url, init.method ?? "GET"]);
     if (url === "https://usechirp.app/status/") {
@@ -37,7 +37,7 @@ describe("servePage", () => {
     expect(body).toContain(`<a class="brand" href="https://usechirp.app/">`);
     expect(body).toContain(`href="https://usechirp.app/#download"`);
     expect(body).toContain(`<a href="/">Network status</a>`);
-    expect(body).toContain(`href="https://github.com/barahn/chirp"`);
+    expect(body).toContain(`href="https://github.com/chirp-remote/chirp"`);
     expect(body).toContain(`href="/assets/site.css?v=1"`);
     expect(body).toContain(`src="/assets/status.js?v=2"`);
   });
@@ -110,7 +110,7 @@ describe("rewriteHref", () => {
   });
 
   test("other links are left alone", () => {
-    expect(rewriteHref("https://github.com/barahn/chirp", SITE)).toBe("https://github.com/barahn/chirp");
+    expect(rewriteHref("https://github.com/chirp-remote/chirp", SITE)).toBe("https://github.com/chirp-remote/chirp");
     expect(rewriteHref("#bird-body", SITE)).toBe("#bird-body");
     expect(rewriteHref("//example.com/x", SITE)).toBe("//example.com/x");
   });

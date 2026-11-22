@@ -4,7 +4,7 @@
 
 Pull requests from outside Fabrintek will not be merged until the Contributor
 License Agreement below is enforced automatically, as in
-[Chirp](https://github.com/barahn/chirp/blob/main/CONTRIBUTING.md), and for
+[Chirp](https://github.com/chirp-remote/chirp/blob/main/CONTRIBUTING.md), and for
 the same reason: Fabrintek holds the copyright in all of it. Issues, bug reports
 and reproduction cases are welcome. A server joining or leaving the network is
 not a change here: it is a pull request to Chirp's `network/servers.json`.
